@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # 2. Configure MongoDB Client
-client = pymongo.MongoClient("mongodb://localhost:27017/")
+client = pymongo.MongoClient("mongodb+srv://loisibro:Bapikina%401@testcluster.ic1q6.mongodb.net/?retryWrites=true&w=majority&appName=TestCluster")
 db = client["survey_db"]  # your database name
 collection = db["user_data"]  # your collection name
 
@@ -46,8 +46,6 @@ def index():
         return render_template("index.html")
 
 # Run Flask
-if __name__ == "__main__":
-    app.run(debug=True)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
 
